@@ -1,0 +1,3 @@
+# DiscordAssistantBot
+
+Ken_CirのDiscordアシスタントBot
