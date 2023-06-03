@@ -42,7 +42,8 @@ export default async (client: AssistantBot, message: Message) => {
 
     await message.reply(`テストチャンネルを作成しました: ${channelMention(channel.id)}`);
   }
-  else if ([client.testTextChannelCategory, client.testVoiceChannelCategory, client.testStageChannelCategory].includes((message.channel as TextChannel | VoiceChannel | StageChannel).parentId as string)) {
+  else if ([client.testTextChannelCategory, client.testVoiceChannelCategory, client.testStageChannelCategory].includes((message.channel as TextChannel | VoiceChannel | StageChannel).parentId as string)
+    && !client.disableTestChannels.includes(message.channelId)) {
     const channel: TextChannel | VoiceChannel | StageChannel = message.channel as TextChannel | VoiceChannel | StageChannel;
     const mentionMemberIds = message.mentions.members?.map(member => member.id) ?? [];
 
