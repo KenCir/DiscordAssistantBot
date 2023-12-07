@@ -52,7 +52,6 @@ export default class AssistantBot extends Client {
         super({
             intents: [
                 GatewayIntentBits.Guilds,
-                GatewayIntentBits.GuildIntegrations,
                 GatewayIntentBits.GuildMessages,
                 GatewayIntentBits.MessageContent,
                 GatewayIntentBits.GuildMembers,
