@@ -6,7 +6,12 @@ export default async (client: AssistantBot, message: Message) => {
 
     const twitterRegex = /https?:\/\/(x|twitter)\.com/g;
     if (twitterRegex.test(message.content)) {
-        await message.reply(message.content.replace(twitterRegex, 'https://fxtwitter.com'));
+        await message.reply(
+            `${message.content.replace(twitterRegex, 'https://twitter.com')}\n${message.content.replace(
+                twitterRegex,
+                'https://fxtwitter.com'
+            )}`
+        );
     }
 
     // Text
