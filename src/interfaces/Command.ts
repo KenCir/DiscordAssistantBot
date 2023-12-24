@@ -1,4 +1,4 @@
-import { CommandInteraction, ApplicationCommandDataResolvable } from 'discord.js';
+import { ApplicationCommandDataResolvable, ChatInputCommandInteraction, CacheType } from 'discord.js';
 import AssistantBot from '../AssistantBot';
 
 export abstract class Command {
@@ -56,5 +56,5 @@ export abstract class Command {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function, no-empty-function
-    async execute(client: AssistantBot, interaction: CommandInteraction): Promise<void> {}
+    async execute(client: AssistantBot, interaction: ChatInputCommandInteraction<CacheType>): Promise<void> {}
 }
