@@ -4,6 +4,7 @@ import AssistantBot from '../../AssistantBot';
 export default async (client: AssistantBot, message: Message) => {
     if (message.author.bot || message.system || !message.guild) return;
 
+    /*
     const twitterRegex = /https?:\/\/(x|twitter)\.com/g;
     if (twitterRegex.test(message.content)) {
         await message.reply(
@@ -13,6 +14,7 @@ export default async (client: AssistantBot, message: Message) => {
             )}`
         );
     }
+    */
 
     // Text
     if (message.channelId === client.createTextTestChannel) {
